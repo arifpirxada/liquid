@@ -1,0 +1,12 @@
+<div class="product-list d-flex-center collection-container">
+
+    {% for collection in collections | limit: 6 %}
+    <div class="product collection-item">
+        {{- collection.title | link_to: collection.url }}
+    </div>
+    {% endfor %}
+    <div class="paginate-container">
+        {{- paginate | default_pagination }}
+    </div>
+
+</div>
