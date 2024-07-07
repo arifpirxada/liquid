@@ -1,0 +1,29 @@
+<h1>Welcome to product page</h1>
+
+{% comment %} Product Details {% endcomment %}
+<p>{{ product.title }}</p>
+{% comment %} <img src="{{ product.featured_image | image_url }}" alt=""> {% endcomment %}
+<p>{{ product.description }}</p>
+{% for img in product.images %}
+    <img width="300" height="300" src="{{ product.featured_image | image_url }}" alt="">
+{% endfor %}
+
+{% comment %} Add to cart form {% endcomment %}
+{% form 'product'
+  , product %}
+  <select name="id">
+    {% for variant in product.variants %}
+      <option value="{{variant.id }}">
+        {{ variant.title }}
+      </option>
+    {% endfor %}
+  </select>
+  <input
+    type="text"
+    name="quantity"
+    min="1"
+    value="1">
+
+  <input type="submit" value="Add to cart">
+  {{ form | payment_button }}
+{% endform %}

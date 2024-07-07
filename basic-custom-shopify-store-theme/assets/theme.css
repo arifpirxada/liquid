@@ -3,3 +3,170 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* ----------------- */
+/*  HEADER SECTION */
+/* ----------------- */
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#navbar div a {
+    color: black;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+/* ----------------- */
+/*  BANNER CSS */
+/* ----------------- */
+
+/* .banner-container {
+    width: 100vw;
+    position: relative;
+    padding: 1rem;
+}
+
+.banner-container img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.banner-container div {
+    position: absolute;
+    top: 5rem;
+    text-align: center;
+    left: 3rem;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-container h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0.5rem;
+    animation: slideFromLeft 1s ease 0.5s forwards;
+    transform: translate(-350px, 50px);
+}
+
+.banner-container p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    animation: slideFromLeft 1s ease 0.5s forwards;
+    transform: translate(-350px, 50px);
+    width: 15rem;
+    text-align: center;
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translate(-320px, 50px);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+} */
+
+/* ----------------- */
+/*  PRODUCT LIST */
+/* ----------------- */
+
+.d-flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-list {
+    margin-top: 3rem;
+    padding: 1rem;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.product {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.product img {
+    border-radius: 16px;
+}
+
+.product p {
+    text-align: center;
+    margin: 10px 5px 5px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(205, 66, 66);
+}
+
+.product a {
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    margin: 5px;
+}
+
+.paginate-container {
+    margin-top: 0.5rem;
+    flex: 100%;
+    display: flex;
+    justify-content: end;
+    padding-right: 1.5rem;
+}
+
+.paginate-container .current {
+    background: linear-gradient(45deg, #5389dd, #519ba6);
+    color: #ffffff;
+}
+
+.paginate-container span {
+    font-size: 24px;
+    padding: 0.3rem 0.8rem;
+    margin: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+.paginate-container span a {
+    text-decoration: none;
+}
+
+/* Collection snippet */
+
+.collection-item a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.collection-container {
+    opacity: 0;
+    margin-top: 1rem;
+    animation: slideFromBottom 1s ease 2s forwards;
+}
+
+@keyframes slideFromBottom {
+    from {
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,20 @@
+<div class="product-list d-flex-center">
+
+    {% paginate collections["front-page-AP"].products by 4 %}
+        {% for current_product in collections["front-page-AP"].products %}
+        <div class="product">
+            <img width="220" height="220" src="{{ current_product.featured_image | image_url}}" alt="">
+            
+            <div class="d-flex-center">
+                {{- current_product.title | link_to: current_product.url }}
+                <p>{{ current_product.price | money }}</p>
+            </div>
+
+        </div>
+        {% endfor %}
+        <div class="paginate-container">
+            {{- paginate | default_pagination }}
+        </div>
+    {% endpaginate %}
+
+</div>
